@@ -40,14 +40,16 @@ FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds)
 );
 ```
 
-![image](ss/ss11.png)
+<img width="402" alt="ss11" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/ed0d1bb3-9523-41e0-8a9f-4d7ad1276c15">
+
 
 tampilkan hasil table :
 
 ``desc mahasiswa;``
 
 
-![image](ss/ss6.png)
+<img width="525" alt="ss6" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/6bb968c4-bc64-4d2a-a157-ea1a79ce8930">
+
 
 2. buat script untuk table dosen :
 
@@ -57,14 +59,15 @@ tampilkan hasil table :
     -> );``
 
 
-![image](ss/ss12.png)
+<img width="346" alt="ss12" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/45baa729-193e-4c2f-9037-4440793d222f">
 
 
 tampiilkan tabel :
 
 ``desc dosen;``
 
-![image](ss/ss7.png)
+<img width="445" alt="ss7" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/2c5e02ad-0ccc-4aee-b991-c81c0ff084ba">
+
 
 3. buat script untuk mata kuliah :
 
@@ -74,14 +77,16 @@ tampiilkan tabel :
     ->     sks INT NOT NULL
     -> );``
 
-![image](ss/ss13.png)
+<img width="347" alt="ss13" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/20f41f02-7a94-4e06-9251-6b0b9a01dcf5">
+
 
 
 tampilkan table :
 
 ``desc Matakuliah;``
 
-![image](ss/ss8.png)
+<img width="445" alt="ss8" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/6c3cc450-49d6-4b4b-b374-c9471fb3ac5b">
+
 
 4. buat script untuk jadwal mengajar :
 
@@ -97,7 +102,8 @@ tampilkan table :
     -> ); ``
 
 
-![image](ss/ss14.png)
+<img width="520" alt="ss14" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/95050b78-5824-4c5b-95f0-1868a9c05f96">
+
 
 
 tampilkan table :
@@ -105,7 +111,8 @@ tampilkan table :
 ``desc JadwalMengajar;``
 
 
-![image](ss/ss9.png)
+<img width="648" alt="ss9" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/1cd88417-c67e-4741-819c-a6516fe6691f">
+
 
 
 5. buat script untuk KRSMahasiswa :
@@ -122,19 +129,22 @@ tampilkan table :
     ->     FOREIGN KEY (kd_ds) REFERENCES Dosen(kd_ds)
     -> );``
 
-![image](ss/ss15.png)
+<img width="468" alt="ss15" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/7e27edc6-ab1c-481a-9fa1-21454efcb98c">
+
 
 tampilkan table :
 
 ``desc KRSMahasiswa;``
 
 
-![image](ss/ss10.png)
+<img width="438" alt="ss10" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/7b6a1d93-a6bd-4be3-8c0b-047032502d85">
+
 
 berikut script secara keseluruhan :
 
 
-![image](ss/ss16.png)
+<img width="444" alt="ss16" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/f876dc43-7199-4259-a404-39a74f381337">
+
 
 ## Praktikum 2 Manipulasi Data (DML)
 Berdasarkan table Mahasiswa pada praktikum sebelumnya:
@@ -179,7 +189,8 @@ Tampilkan semua isi/record tabel!
     -> (11223348,"tiara wahidah","perempuan","1980-02-05","","Bekasi","","",""),
     -> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");``
 
-![image](ss/ss17.png)
+<img width="683" alt="ss17" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/5e4c2c06-ec35-408a-9160-e79de9ead32a">
+
 
 2. menampilkan semua isi/record pada tabel bisa menggunakan kode berikut : 
 
@@ -187,21 +198,24 @@ Tampilkan semua isi/record tabel!
 ``select*from mahasiswa;``
 
 
-![image](ss/ss18.png)
+<img width="583" alt="ss18" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/1a46025d-e7fc-4c9d-8128-51d68dd51e8b">
+
 
 3. mengubah data tanggal lahir mahasiswa yang bernama Ari menjadi : 1979-08-31 menggunakan kode berikut :
 
 ``update mahasiswa set tgl_lahir='1979-08-31' where nim=11223344;``
 
 
-![image](ss/ss19.png)
+<img width="578" alt="ss19" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/a3993b0e-2e9f-49e9-a8a7-a5f33df8c5af">
+
 
 4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :
 
 ``select*from mahasiswa where nim=11223344;``
 
 
-![image](ss/ss20.png)
+<img width="584" alt="ss20" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/dec01c59-25d8-4c12-a7cd-a510161d8b4c">
+
 
 
 5. Menghapus Mahasiswa yang bernama Dina dengan cara sebagai berikut:
@@ -209,7 +223,8 @@ Tampilkan semua isi/record tabel!
 ``delete from mahasiswa where nim=11223346;``
 
 
-![image](ss/ss21.png)
+<img width="586" alt="ss21" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/e42f475c-7776-487a-a631-774b8f61fcfb">
+
 
 
 6. Menampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2 dengan cara sebagai berikut :
@@ -217,7 +232,8 @@ Tampilkan semua isi/record tabel!
 `` select*from mahasiswa where tgl_lahir<='1996-1-2';``
 
 
-![image](ss/ss22.png)
+<img width="760" alt="ss22" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/29599dbb-9b79-4973-b1f6-56114bde96bb">
+
 
 
 7. Menampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan dengan cara sebagai berikut :
@@ -226,7 +242,8 @@ Tampilkan semua isi/record tabel!
 ``select * from mahasiswa where kota='bekasi' and jenis_kelamin='Perempuan';``
 
 
-![image](ss/ss23.png)
+<img width="583" alt="ss23" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/256e0b45-c4e6-46b9-8031-f31bfa08fe65">
+
 
 
 8. Menampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita dengan cara sebagai berikut :
@@ -235,7 +252,8 @@ Tampilkan semua isi/record tabel!
 `` select * from mahasiswa where kota='Bekasi' and jenis_kelamin='Laki-laki' or tgl_lahir<='1997-01-02' and jenis_kelamin='Perempuan';``
 
 
-![image](ss/ss24.png)
+<img width="837" alt="ss24" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/6426af24-db41-49c2-b02b-2848227bcd0c">
+
 
 
 9. Menampilkan data nama dan jalan mahasiswa saja dari tabel tersebut dengan cara sebagai berikut :
@@ -244,7 +262,8 @@ Tampilkan semua isi/record tabel!
 ``select nama, jalan from mahasiswa;``
 
 
-![image](ss/ss25.png)
+<img width="321" alt="ss25" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/c2bdb2aa-6ed2-435f-9691-8dc32a0d2243">
+
 
 
 10. Menampilkan data mahasiswa terurut berdasarkan nama dengan cara sebagai berikut :
@@ -254,7 +273,8 @@ Tampilkan semua isi/record tabel!
     -> order by nama asc;``
 
 
-![image](ss/ss26.png)
+<img width="609" alt="ss26" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/54bc258c-d92c-4246-ad04-d754a11495f4">
+
 
 
 
@@ -273,7 +293,8 @@ contoh :
 ``INSERT INTO biodata (nim, nama, alamat) VALUE ('1234','Rio','Bekasi');``
 
 
-![image](ss/ss27.png)
+<img width="319" alt="ss27" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/e78576b4-a697-4bbb-8569-c7f700c86d1a">
+
 
 
 2. menampilkan data :
@@ -288,7 +309,8 @@ contoh :
 ``select * from biodata;``
 
 
-![image](ss/ss28.png)
+<img width="230" alt="ss28" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/2254412b-6d82-4d58-8f66-a45c7a47c135">
+
 
 
 atau untuk memfilter data gunakan perintah :
@@ -296,7 +318,8 @@ atau untuk memfilter data gunakan perintah :
 ``SELECT * FROM WHERE <kondisi>``
 
 
-![image](ss/ss31.png)
+<img width="575" alt="ss31" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/3e64461d-147f-4c46-86dd-29b83c40bb05">
+
 
 
 
@@ -310,7 +333,8 @@ contoh :
 ``UPDATE biodata SET nama='Rio', alamat='Bekasi' where nim='123344';``
 
 
-![image](ss/ss29.png)
+<img width="481" alt="ss29" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/a6a929fc-d9c4-47f6-800d-f01c1476eaeb">
+
 
 
 4. Menghapus data :
@@ -323,7 +347,8 @@ contoh :
 
 ``DELETE FROM biodata WHERE nim=‘12334’``
 
-![image](ss/ss30.png)
+<img width="346" alt="ss30" src="https://github.com/Thndyyy/praktikum2_Sql/assets/148066593/6c516fa9-853f-4b9d-b947-52b660d3bf83">
+
 
 
 
